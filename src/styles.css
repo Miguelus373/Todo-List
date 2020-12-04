@@ -1,0 +1,13 @@
+#form-container {
+  display: none;
+}
+
+#form-container:target {
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+}
