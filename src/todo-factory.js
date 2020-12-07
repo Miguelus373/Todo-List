@@ -1,5 +1,5 @@
-const todoFactory = (title, description, dueDate, priority) => ({
-  title, description, dueDate, priority,
+const todoFactory = (title, description, dueDate, priority, project) => ({
+  title, description, dueDate, priority, project,
 });
 
 export { todoFactory as default };
