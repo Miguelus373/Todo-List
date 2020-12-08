@@ -1,26 +1,44 @@
 const formLoad = (form, container, projects) => {
   if (form === 'todo') {
     container.innerHTML = `
-      <form class="form">
-        <a href="#" class="close">x</a>
-        <label for="todo">Title</label>
-        <input type="text" name="todo" >
-        <label for="description">Description</label>
-        <input type="text" name="description" >
-        <label for="dueDate">Due Date</label>
+    <div class="login-box">
+    <h2>Add New Todo</h2>
+    <a href="#" class="close">x</a>
+    <form>
+      <div class="user-box">
+        <input type="text" name="todo" required="">
+        <label>Project Title</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="description" required="">
+        <label>Description</label>
+      </div>
+      <div class="user-box">
         <input type="date" name="dueDate" >
-        <label>Set Priority</label>
-        <select>
-        <option>High priority</option>
-        <option>Mid priority</option>
-        <option selected>Low priority</option>
+        <label>Due Date</label>
+      </div>
+      <div class="select">
+      <select name="slct">
+      <option selected disabled>Set the priorty </option>
+      <option value="1">High</option>
+      <option value="2">Medium</option>
+      <option value="3">Low</option>
+      </select>
+      </div>
+      <div class="select">
+        <select name="slct" id="projects">
+          <option selected disabled>Select a project</option>
         </select>
-        <label>Select a Project</label>
-        <select id="projects">
-        </select>
-        </form>
-      <button type="button" id="add">Add</button>
-    `;
+      </div>
+      <a href="#" id="add">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Add
+      </a>
+    </form>
+    </div>`;
 
     const select = document.getElementById('projects');
 
@@ -32,12 +50,23 @@ const formLoad = (form, container, projects) => {
     });
   } else if (form === 'project') {
     container.innerHTML = `
-    <form class="form">
-      <a href="#" class="close">x</a>
-      <label for="name">Name</label>
-      <input type="text" name="name" >
-      <button type="button" id="create">Create</button>
+    <div class="login-box">
+    <a href="#" class="close">x</a>
+    <h2>Create A New Project</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="name" required="">
+        <label>Project Title</label>
+      </div>
+      <a href="#" id="create">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Create
+      </a>
     </form>
+    </div>
     `;
   }
 };

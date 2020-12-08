@@ -8,11 +8,8 @@ const addTodo = document.getElementById('add-todo');
 const newProjet = document.getElementById('new-project');
 const formContainer = document.getElementById('form-container');
 
-const projectList = ['Global'];
-const todoList = [];
-
-setStorage('projectList', projectList);
-setStorage('todoList', todoList);
+const projectList = setStorage('projectList', ['Global']);
+const todoList = setStorage('todoList', []);
 
 addTodo.addEventListener('click', () => {
   form('todo', formContainer, useStorage('projectList'));
