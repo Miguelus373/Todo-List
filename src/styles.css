@@ -2,8 +2,8 @@ html {
   height: 100%;
 }
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
   background: linear-gradient(#141e30, #243b55);
 }
@@ -16,7 +16,7 @@ nav {
   display: flex;
   justify-content: center;
   box-shadow: 0 10px 18px #111;
-  position: fixed;
+  position: absolute;
   top: 0;
 }
 
@@ -49,10 +49,11 @@ nav {
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+  backdrop-filter: blur(14px);
 }
 
 .login-box h2 {
@@ -87,21 +88,9 @@ nav {
   outline: none;
   background: transparent;
 }
-.login-box .user-box label {
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-}
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
+label {
+  padding: 10px 0;
   color: #03e9f4;
   font-size: 12px;
 }
@@ -115,7 +104,7 @@ nav {
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
   margin-top: 0.5rem;
   letter-spacing: 4px;
 }
@@ -124,10 +113,8 @@ nav {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
 }
 
 .login-box a span {
@@ -148,7 +135,8 @@ nav {
   0% {
     left: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -160,14 +148,15 @@ nav {
   height: 100%;
   background: linear-gradient(180deg, transparent, #03e9f4);
   animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
+  animation-delay: 0.25s;
 }
 
 @keyframes btn-anim2 {
   0% {
     top: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -179,14 +168,15 @@ nav {
   height: 2px;
   background: linear-gradient(270deg, transparent, #03e9f4);
   animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
+  animation-delay: 0.5s;
 }
 
 @keyframes btn-anim3 {
   0% {
     right: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     right: 100%;
   }
 }
@@ -198,14 +188,15 @@ nav {
   height: 100%;
   background: linear-gradient(360deg, transparent, #03e9f4);
   animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
+  animation-delay: 0.75s;
 }
 
 @keyframes btn-anim4 {
   0% {
     bottom: -100%;
   }
-  50%,100% {
+  50%,
+  100% {
     bottom: 100%;
   }
 }
@@ -231,22 +222,22 @@ select::-ms-expand {
   position: relative;
   display: flex;
   width: 20em;
-  height: 3em;
+  height: 3rem;
   line-height: 3;
   background: #2c3e50;
   overflow: hidden;
-  border-radius: .25em;
+  border-radius: 0.25em;
   margin-bottom: 1.5rem;
 }
 select {
   flex: 1;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   color: #fff;
   cursor: pointer;
 }
 /* Arrow */
 .select::after {
-  content: '\25BC';
+  content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
@@ -254,9 +245,9 @@ select {
   background: #34495e;
   cursor: pointer;
   pointer-events: none;
-  -webkit-transition: .25s all ease;
-  -o-transition: .25s all ease;
-  transition: .25s all ease;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 /* Transition */
 .select:hover::after {

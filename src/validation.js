@@ -1,5 +1,5 @@
 const valid = (arr, str) => {
-  if (arr.includes(str)) {
+  if (arr.includes(str) || str === '') {
     return false;
   }
   return true;

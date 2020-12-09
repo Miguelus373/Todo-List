@@ -5,29 +5,29 @@ const formLoad = (form, container, projects) => {
     <h2>Add New Todo</h2>
     <a href="#" class="close">x</a>
     <form>
+      <label>Project Title</label>
       <div class="user-box">
-        <input type="text" name="todo" required="">
-        <label>Project Title</label>
+        <input type="text" name="todo">
       </div>
+      <label>Description</label>
       <div class="user-box">
-        <input type="text" name="description" required="">
-        <label>Description</label>
+        <input type="text" name="description">
       </div>
+      <label>Due Date</label>
       <div class="user-box">
-        <input type="date" name="dueDate" >
-        <label>Due Date</label>
+        <input type="date" name="dueDate">
       </div>
-      <div class="select">
-      <select name="slct">
-      <option selected disabled>Set the priorty </option>
-      <option value="1">High</option>
-      <option value="2">Medium</option>
-      <option value="3">Low</option>
-      </select>
-      </div>
-      <div class="select">
+      <label>Set the priority</label>
+      <div class="select user-box">
+        <select name="slct">
+          <option>High</option>
+          <option>Medium</option>
+          <option selected>Low</option>
+        </select>
+        </div>
+      <label>Select a project</label>
+      <div class="select user-box">
         <select name="slct" id="projects">
-          <option selected disabled>Select a project</option>
         </select>
       </div>
       <a href="#" id="add">
@@ -54,9 +54,9 @@ const formLoad = (form, container, projects) => {
     <a href="#" class="close">x</a>
     <h2>Create A New Project</h2>
     <form>
+    <label>Project Title</label>
       <div class="user-box">
         <input type="text" name="name" required="">
-        <label>Project Title</label>
       </div>
       <a href="#" id="create">
         <span></span>
