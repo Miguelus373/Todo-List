@@ -1,11 +1,12 @@
 html {
   height: 100%;
 }
+
 body {
+  height: 100%;
   margin: 0;
-  padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background: linear-gradient(#141e30, #243b55) fixed;
 }
 
 nav {
@@ -28,6 +29,17 @@ nav {
   border-radius: 4px;
 }
 
+#flash {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 2.3rem;
+  padding: 1rem;
+  color: white;
+  background-color: transparent;
+}
+
 #form-container {
   display: none;
 }
@@ -39,6 +51,7 @@ nav {
 .form {
   display: flex;
   flex-direction: column;
+
   /* text-align: center; */
 }
 
@@ -113,7 +126,10 @@ label {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+  box-shadow:
+    0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
     0 0 100px #03e9f4;
 }
 
@@ -135,6 +151,7 @@ label {
   0% {
     left: -100%;
   }
+
   50%,
   100% {
     left: 100%;
@@ -155,6 +172,7 @@ label {
   0% {
     top: -100%;
   }
+
   50%,
   100% {
     top: 100%;
@@ -175,6 +193,7 @@ label {
   0% {
     right: -100%;
   }
+
   50%,
   100% {
     right: 100%;
@@ -195,28 +214,18 @@ label {
   0% {
     bottom: -100%;
   }
+
   50%,
   100% {
     bottom: 100%;
   }
 }
 
-/* Reset Select */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background: #2c3e50;
-  background-image: none;
-}
 /* Remove IE arrow */
 select::-ms-expand {
   display: none;
 }
+
 /* Custom Select */
 .select {
   position: relative;
@@ -229,12 +238,23 @@ select::-ms-expand {
   border-radius: 0.25em;
   margin-bottom: 1.5rem;
 }
+
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
   flex: 1;
   padding: 0 0.5em;
   color: #fff;
   cursor: pointer;
 }
+
 /* Arrow */
 .select::after {
   content: "\25BC";
@@ -249,6 +269,7 @@ select {
   -o-transition: 0.25s all ease;
   transition: 0.25s all ease;
 }
+
 /* Transition */
 .select:hover::after {
   color: #f39c12;
@@ -259,7 +280,7 @@ select {
 }
 
 #content {
-  padding: 4rem 4rem 0;
+  padding: 4.8rem 4rem 3rem;
 }
 
 .project-div {
@@ -276,12 +297,27 @@ select {
 
 .todos-div {
   width: 70%;
+
   /* display: none; */
 }
 
 .todo-info {
   display: flex;
+  align-items: center;
   list-style: none;
   justify-content: space-evenly;
   padding: 0.8rem 0;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: solid #03e9f4 1px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 14px black;
 }

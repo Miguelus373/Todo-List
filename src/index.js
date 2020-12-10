@@ -21,6 +21,7 @@ display(projectList, todoList, contentDiv);
 deleteEvent(todoList);
 
 addTodo.addEventListener('click', () => {
+  flash.innerHTML = '';
   form('todo', formContainer, useStorage('projectList'));
   const addBtn = document.getElementById('add');
   addBtn.addEventListener('click', () => {
@@ -30,7 +31,6 @@ addTodo.addEventListener('click', () => {
       useStorage('todoList', todoList);
       display(projectList, todoList, contentDiv);
       deleteEvent(todoList);
-      flash.innerHTML = '';
     } else {
       flash.innerHTML = "Error: Couldn't create Todo";
     }
@@ -38,6 +38,7 @@ addTodo.addEventListener('click', () => {
 });
 
 newProjet.addEventListener('click', () => {
+  flash.innerHTML = '';
   form('project', formContainer);
   const createBtn = document.getElementById('create');
   createBtn.addEventListener('click', () => {
@@ -47,7 +48,6 @@ newProjet.addEventListener('click', () => {
       useStorage('projectList', projectList);
       display(projectList, todoList, contentDiv);
       deleteEvent(todoList);
-      flash.innerHTML = '';
     } else {
       flash.innerHTML = "Error: Couldn't create project";
     }
