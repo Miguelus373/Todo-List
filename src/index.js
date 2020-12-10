@@ -42,4 +42,4 @@ newProjet.addEventListener('click', () => {
   });
 });
 const contentDiv = document.getElementById('content');
-display(projectList, contentDiv);
+display(projectList, todoList, contentDiv);
