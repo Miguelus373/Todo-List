@@ -1,4 +1,6 @@
 const displayProjectTodo = (projectArr, todoArr, content) => {
+  content.innerHTML = '';
+
   projectArr.map(projectTitle => {
     const projectDiv = document.createElement('div');
     projectDiv.setAttribute('class', 'project-div');
@@ -9,12 +11,12 @@ const displayProjectTodo = (projectArr, todoArr, content) => {
     if (todo.project === projectTitle) {
       return `
       <ul class="todo-info" id="${index}">
-      <li>${todo.title}</li>
-      <li>${todo.description}</li>
-      <li>${todo.dueDate}</li>
-      <li>${todo.priority}</li>
-      <button id= "#btn-delete" class="delete-btn">Delete</button>
-            </ul>`;
+        <li>${todo.title}</li>
+        <li>${todo.description}</li>
+        <li>${todo.dueDate}</li>
+        <li>${todo.priority}</li>
+        <button class="delete-btn">Delete</button>
+      </ul>`;
     }
   }).join('')}
     </div>`;
