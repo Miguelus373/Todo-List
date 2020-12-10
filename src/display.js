@@ -13,7 +13,8 @@ const displayProjectTodo = (projectArr, todoArr, content) => {
       <li>${todo.description}</li>
       <li>${todo.dueDate}</li>
       <li>${todo.priority}</li>
-      </ul>`;
+      <button id= "#btn-delete" class="delete-btn">Delete</button>
+            </ul>`;
     }
   }).join('')}
     </div>`;

@@ -43,3 +43,8 @@ newProjet.addEventListener('click', () => {
 });
 const contentDiv = document.getElementById('content');
 display(projectList, todoList, contentDiv);
+
+const deleteBtn = document.querySelectorAll('.delete-btn');
+deleteBtn.forEach( btn => btn.addEventListener('click', (e) => {
+  e.target.parentNode.remove();
+}))
