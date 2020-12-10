@@ -257,3 +257,31 @@ select {
 .nav-item:hover {
   background-color: #243b55;
 }
+
+#content {
+  padding: 4rem 4rem 0;
+}
+
+.project-div {
+  margin: 1rem auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  background: linear-gradient(#3beff867, #059da567);
+  border-radius: 5px;
+}
+
+.todos-div {
+  width: 70%;
+  /* display: none; */
+}
+
+.todo-info {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  padding: 0.8rem 0;
+}
