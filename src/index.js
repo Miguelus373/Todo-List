@@ -5,6 +5,7 @@ import useStorage from './use-storage';
 import setStorage from './set-storage';
 import valid from './validation';
 import todoValid from './todoValidation';
+import display from './display';
 
 const addTodo = document.getElementById('add-todo');
 const newProjet = document.getElementById('new-project');
@@ -40,3 +41,5 @@ newProjet.addEventListener('click', () => {
     }
   });
 });
+const contentDiv = document.getElementById('content');
+display(projectList, contentDiv);
