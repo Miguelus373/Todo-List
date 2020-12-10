@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
 const displayProjectTodo = (projectArr, todoArr, content) => {
   content.innerHTML = '';
 

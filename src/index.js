@@ -6,16 +6,19 @@ import setStorage from './set-storage';
 import valid from './validation';
 import todoValid from './todoValidation';
 import display from './display';
+import deleteEvent from './delete_button';
 
 const addTodo = document.getElementById('add-todo');
 const newProjet = document.getElementById('new-project');
 const formContainer = document.getElementById('form-container');
 const contentDiv = document.getElementById('content');
+const flash = document.getElementById('flash');
 
 const projectList = setStorage('projectList', ['Global']);
 const todoList = setStorage('todoList', []);
 
 display(projectList, todoList, contentDiv);
+deleteEvent(todoList);
 
 addTodo.addEventListener('click', () => {
   form('todo', formContainer, useStorage('projectList'));
@@ -26,8 +29,10 @@ addTodo.addEventListener('click', () => {
       todoList.push(todo(...formValues));
       useStorage('todoList', todoList);
       display(projectList, todoList, contentDiv);
+      deleteEvent(todoList);
+      flash.innerHTML = '';
     } else {
-      alert('Check your data and try again');
+      flash.innerHTML = "Error: Couldn't create Todo";
     }
   });
 });
@@ -41,17 +46,10 @@ newProjet.addEventListener('click', () => {
       projectList.push(formValues);
       useStorage('projectList', projectList);
       display(projectList, todoList, contentDiv);
+      deleteEvent(todoList);
+      flash.innerHTML = '';
     } else {
-      alert('project name has already been used');
+      flash.innerHTML = "Error: Couldn't create project";
     }
   });
 });
-
-const deleteBtn = document.querySelectorAll('.delete-btn');
-deleteBtn.forEach( btn => btn.addEventListener('click', (e) => {
-  const parent = e.target.parentNode;
-
-  todoList.splice(parent.id, 1);
-  useStorage('todoList', todoList);
-  parent.remove();
-}));
