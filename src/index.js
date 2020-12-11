@@ -7,6 +7,7 @@ import valid from './validation';
 import todoValid from './todoValidation';
 import display from './display';
 import deleteEvent from './delete_button';
+import editEvent from './edit';
 
 const addTodo = document.getElementById('add-todo');
 const newProjet = document.getElementById('new-project');
@@ -53,3 +54,4 @@ newProjet.addEventListener('click', () => {
     }
   });
 });
+ editEvent(formContainer);

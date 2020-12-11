@@ -68,6 +68,46 @@ const formLoad = (form, container, projects) => {
     </form>
     </div>
     `;
+  } else if (form === 'edit') {
+    container.innerHTML = `
+    <div class="login-box">
+    <h2>Edit Todo</h2>
+    <a href="#" class="close">x</a>
+    <form>
+      <label>Todo Title</label>
+      <div class="user-box">
+        <input type="text" name="todo">
+      </div>
+      <label>Description</label>
+      <div class="user-box">
+        <input type="text" name="description">
+      </div>
+      <label>Due Date</label>
+      <div class="user-box">
+        <input type="date" name="dueDate">
+      </div>
+      <label>Set the priority</label>
+      <div class="select user-box">
+        <select name="slct">
+          <option>High</option>
+          <option>Medium</option>
+          <option selected>Low</option>
+        </select>
+        </div>
+      <label>Select a project</label>
+      <div class="select user-box">
+        <select name="slct" id="projects">
+        </select>
+      </div>
+      <a href="#" id="add">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Update
+      </a>
+    </form>
+    </div>`;
   }
 };
 

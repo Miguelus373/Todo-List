@@ -15,6 +15,7 @@ const displayProjectTodo = (projectArr, todoArr, content) => {
         <li>${todo.description}</li>
         <li>${todo.dueDate}</li>
         <li>${todo.priority}</li>
+        <a herf="#form-container" class="edit-btn">Edit</a>
         <button class="delete-btn">Done</button>
       </ul>`;
     }
