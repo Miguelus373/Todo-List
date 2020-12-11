@@ -5,7 +5,7 @@ const formLoad = (form, container, projects) => {
     <h2>Add New Todo</h2>
     <a href="#" class="close">x</a>
     <form>
-      <label>Project Title</label>
+      <label>Todo Title</label>
       <div class="user-box">
         <input type="text" name="todo">
       </div>

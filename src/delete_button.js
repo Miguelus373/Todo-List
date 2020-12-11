@@ -8,6 +8,7 @@ const deleteEvent = (todoList) => {
     todoList.splice(parent.id, 1);
     useStorage('todoList', todoList);
     parent.remove();
+    deleteEvent(todoList);
   }));
 };
 

@@ -1,9 +1,7 @@
-/* eslint-disable array-callback-return */
-/* eslint-disable consistent-return */
 const displayProjectTodo = (projectArr, todoArr, content) => {
   content.innerHTML = '';
 
-  projectArr.map(projectTitle => {
+  projectArr.forEach(projectTitle => {
     const projectDiv = document.createElement('div');
     projectDiv.setAttribute('class', 'project-div');
     projectDiv.innerHTML = `
@@ -17,9 +15,10 @@ const displayProjectTodo = (projectArr, todoArr, content) => {
         <li>${todo.description}</li>
         <li>${todo.dueDate}</li>
         <li>${todo.priority}</li>
-        <button class="delete-btn">Delete</button>
+        <button class="delete-btn">Done</button>
       </ul>`;
     }
+    return '';
   }).join('')}
     </div>`;
 

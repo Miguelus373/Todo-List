@@ -51,8 +51,6 @@ nav {
 .form {
   display: flex;
   flex-direction: column;
-
-  /* text-align: center; */
 }
 
 .login-box {
@@ -297,8 +295,6 @@ select {
 
 .todos-div {
   width: 70%;
-
-  /* display: none; */
 }
 
 .todo-info {

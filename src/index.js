@@ -32,7 +32,7 @@ addTodo.addEventListener('click', () => {
       display(projectList, todoList, contentDiv);
       deleteEvent(todoList);
     } else {
-      flash.innerHTML = "Error: Couldn't create Todo";
+      flash.innerHTML = 'There are some fields missing, please try again';
     }
   });
 });
@@ -49,7 +49,7 @@ newProjet.addEventListener('click', () => {
       display(projectList, todoList, contentDiv);
       deleteEvent(todoList);
     } else {
-      flash.innerHTML = "Error: Couldn't create project";
+      flash.innerHTML = 'That project name cannot be used';
     }
   });
 });
