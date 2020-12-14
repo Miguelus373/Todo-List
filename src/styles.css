@@ -305,15 +305,16 @@ select {
   padding: 0.8rem 0;
 }
 
-.delete-btn {
+.btn {
   background-color: transparent;
   border: solid #03e9f4 1px;
   border-radius: 5px;
   padding: 0.5rem;
   color: #fff;
+  text-decoration: none;
 }
 
-.delete-btn:hover {
+.btn:hover {
   cursor: pointer;
   box-shadow: 0 0 14px black;
 }

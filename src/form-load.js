@@ -1,4 +1,6 @@
-const formLoad = (form, container, projects) => {
+const formLoad = (form, projects) => {
+  const container = document.getElementById('form-container');
+
   if (form === 'todo') {
     container.innerHTML = `
     <div class="login-box">
@@ -76,30 +78,17 @@ const formLoad = (form, container, projects) => {
     <form>
       <label>Todo Title</label>
       <div class="user-box">
-        <input type="text" name="todo">
+        <input type="text" name="todo" value="${projects.title}">
       </div>
       <label>Description</label>
       <div class="user-box">
-        <input type="text" name="description">
+        <input type="text" name="description" value="${projects.description}">
       </div>
       <label>Due Date</label>
       <div class="user-box">
-        <input type="date" name="dueDate">
+        <input type="date" name="dueDate" value="${projects.dueDate}">
       </div>
-      <label>Set the priority</label>
-      <div class="select user-box">
-        <select name="slct">
-          <option>High</option>
-          <option>Medium</option>
-          <option selected>Low</option>
-        </select>
-        </div>
-      <label>Select a project</label>
-      <div class="select user-box">
-        <select name="slct" id="projects">
-        </select>
-      </div>
-      <a href="#" id="add">
+      <a href="#" id="update">
         <span></span>
         <span></span>
         <span></span>

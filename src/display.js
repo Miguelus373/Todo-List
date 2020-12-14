@@ -1,4 +1,6 @@
-const displayProjectTodo = (projectArr, todoArr, content) => {
+const displayProjectTodo = (projectArr, todoArr) => {
+  const content = document.getElementById('content');
+
   content.innerHTML = '';
 
   projectArr.forEach(projectTitle => {
@@ -15,8 +17,8 @@ const displayProjectTodo = (projectArr, todoArr, content) => {
         <li>${todo.description}</li>
         <li>${todo.dueDate}</li>
         <li>${todo.priority}</li>
-        <a herf="#form-container" class="edit-btn">Edit</a>
-        <button class="delete-btn">Done</button>
+        <a href="#form-container" class="edit btn">Edit</a>
+        <button class="delete btn">Done</button>
       </ul>`;
     }
     return '';
